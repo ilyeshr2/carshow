@@ -17,7 +17,7 @@ function CarShow() {
         position={[3, 2, 5]} 
       />
 
-      <color attach="background" args={[1,0,0]} />
+      <color attach="background" args={[0,0,0]} />
 
       <spotLight
         color={[1, 0.25, 0.7]}
