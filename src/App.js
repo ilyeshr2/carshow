@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import './index.css';
-import { OrbitControls, PerspectiveCamera, SpotLight} from '@react-three/drei';
+import { OrbitControls, PerspectiveCamera} from '@react-three/drei';
 import { Ground } from "./Ground";
 
 function CarShow() {
@@ -17,9 +17,9 @@ function CarShow() {
         position={[3, 2, 5]} 
       />
 
-      <color attach="background" args={[0,0,0]} />
+      <color attach="background" args={[1,0,0]} />
 
-      <spotLight
+      <SpotLight
         color={[1, 0.25, 0.7]}
         intensity={1.5}
         angle={0.6}
@@ -28,7 +28,7 @@ function CarShow() {
         castShadow
         shadow-bias={-0.0001}
       />
-      <spotLight
+      <SpotLight
         color={[0.14, 0.5, 1]}
         intensity={2}
         angle={0.6} 
