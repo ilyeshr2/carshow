@@ -2,14 +2,20 @@ import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import './index.css';
 import { OrbitControls, PerspectiveCamera, SpotLight} from '@react-three/drei';
-import { Ground } from './components/Ground';
+import { Ground } from "./Ground";
 
 function CarShow() {
   return (
     <>
-      <OrbitControls target={[0, 0.35, 0]} maxPolarAngle={1.45} />
+      <OrbitControls 
+        target={[0, 0.35, 0]} 
+        maxPolarAngle={1.45} 
+      />
 
-      <PerspectiveCamera makeDefault fov={100} position={[3, 2, 5]} />
+      <PerspectiveCamera 
+        makeDefault fov={100} 
+        position={[3, 2, 5]} 
+      />
 
       <color attach="background" args={[0,0,0]} />
 
