@@ -1,20 +1,15 @@
 {
-  "name": "carshow",
+  "name": "car-show",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@react-three/drei": "^9.4.2",
     "@react-three/fiber": "^8.0.11",
     "@react-three/postprocessing": "^2.3.2",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/three": "^0.167.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-scripts": "^5.0.1",
-    "three": "^0.139.2",
-    "web-vitals": "^2.1.4"
+    "react-scripts": "5.0.1",
+    "three": "0.139.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -23,10 +18,7 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
