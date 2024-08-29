@@ -29,6 +29,8 @@ export function Ground() {
 
   return (
     <mesh rotation-x={-Math.PI * 0.5} castShadow receiveShadow>
+      <axesHelper args={[5]} />
+      <gridHelper args={[100, 100]} />
       <planeGeometry args={[30, 30]} />
       <MeshReflectorMaterial
         envMapIntensity={0}

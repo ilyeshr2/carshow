@@ -20,7 +20,7 @@ function CarShow() {
       <color attach="background" args={[0,0,0]} />
 
       <spotLight
-        color={[1, 0.25, 0.7]}
+        color={[1, 1, 1]}
         intensity={1.5}
         angle={0.6}
         penumbra={0.5}
@@ -29,7 +29,7 @@ function CarShow() {
         shadow-bias={-0.0001}
       />
       <spotLight
-        color={[0.14, 0.5, 1]}
+        color={[1, 1, 1]}
         intensity={2}
         angle={0.6} 
         penumbra={0.5}
