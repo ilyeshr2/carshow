@@ -1,16 +1,16 @@
-import * as THREE from 'three';
 import React, { useEffect } from "react";
 import { MeshReflectorMaterial } from "@react-three/drei";
-import { useLoader } from "@react-three/fiber";
-import { RepeatWrapping, TextureLoader } from "three";
+import {useLoader } from "@react-three/fiber";
+import {RepeatWrapping, TextureLoader } from "three";
+import * as THREE from 'three';
 
 
 
 export function Ground() {
 
   const [roughness, normal] = useLoader(TextureLoader, [
-    process.env.PUBLIC_URL + "textures/terrain-roughness.jpg",
-    process.env.PUBLIC_URL + "textures/terrain-normal.jpg",
+    process.env.PUBLIC_URL + "/textures/terrain-roughness.jpg",
+    process.env.PUBLIC_URL + "/textures/terrain-normal.jpg",
   ]);
 
   useEffect(() => {
@@ -19,13 +19,20 @@ export function Ground() {
       t.wrapT = RepeatWrapping;
       t.repeat.set(5, 5);
     });
-  
-    normal.encoding = THREE.LinearEncoding;
+
+    normal.encoding = THREE.LinearToneMapping;
+
+
+
+
   }, [normal, roughness]);
-  
 
   return (
+
+
     <mesh rotation-x={-Math.PI * 0.5} castShadow receiveShadow>
+      <axesHelper args={[5]} />
+      <gridHelper args={[100, 100]} />
       <planeGeometry args={[30, 30]} />
       <MeshReflectorMaterial
         envMapIntensity={0}
