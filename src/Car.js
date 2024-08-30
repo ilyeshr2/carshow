@@ -9,20 +9,29 @@ export function Car() {
     process.env.PUBLIC_URL + "models/car/scene.gltf"
   );
 
-  // Load your texture (replace with your actual image path)
-  const bodyTexture = useLoader(TextureLoader, process.env.PUBLIC_URL + "/models/car/textures/TireMaterial_baseColor.png");
+  // Load your custom texture
+  const bodyTexture = useLoader(TextureLoader, process.env.PUBLIC_URL + "/models/car/textures/ai.png");
 
   useEffect(() => {
     gltf.scene.scale.set(0.005, 0.005, 0.005);
     gltf.scene.position.set(0, -0.035, 0);
+
     gltf.scene.traverse((object) => {
       if (object instanceof Mesh) {
         object.castShadow = true;
         object.receiveShadow = true;
 
+        // Check if the object corresponds to the car body
+        if (object.material.name === "Car_Paint") {
+          ///console.log(object.material.color);
+          object.material.color=null
+        }
+        if (object.material.name === "Car_Paint2") {
+          //console.log(object.material.color);
+          object.material.color=null
+        }
         object.material.map = bodyTexture;
         object.material.needsUpdate = true;
-         
       }
     });
   }, [gltf, bodyTexture]);

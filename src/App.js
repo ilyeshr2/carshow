@@ -15,7 +15,7 @@ import {
 } from "@react-three/drei";
 import "./style.css";
 // import { Boxes } from "./Boxes";
-import { Car } from "./Car";
+import { Car, Car2 } from "./Car";
 import { Ground } from "./Ground";
 import { FloatingGrid } from "./FloatingGrid";
 import { Rings } from "./Rings";
@@ -59,7 +59,7 @@ function CarShow() {
         castShadow
         shadow-bias={-0.0001}
       /> 
-      <Ground />
+      {/* <Ground /> */}
       <FloatingGrid />
       {/* <Boxes /> */}
       {/* <Rings /> */}
