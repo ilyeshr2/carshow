@@ -50,3 +50,9 @@ export function Car() {
 
   return <primitive object={gltf.scene} />;
 }
+
+
+
+function App() { 
+  return App();
+}
